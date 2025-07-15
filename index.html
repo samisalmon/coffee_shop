@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- preloader-start -->
+    <div
+      class="preloader w-full h-screen bg-gradient-to-br from-emerald-700 via-emerald-900 to-black flex justify-center items-center"
+      data-preloader
+    >
+      <div
+        class="spin w-12 h-12 bg-transparent border-[#38bdf8] border-solid border-[5px] rounded-full border-t-transparent animate-spin"
+      ></div>
+    </div>
+    <!-- preloader-end -->
+
+    <!-- header-start -->
+    <header
+      class="w-full py-6 bg-[#FFF5E1] fixed flex justify-between items-center px-5 sm:px-10 shadow-md z-[80]"
+    >
+      <div class="logo font-ror text-4xl text-[#8B4513] drop-shadow">
+        Bean Haven
+      </div>
+
+      <nav
+        class="fixed md:static z-[100] top-0 left-[-250px] md:left-0 flex flex-col md:flex-row bg-[#FFF5E1] w-[250px] md:w-auto h-screen md:h-auto shadow-lg md:shadow-none transition-all duration-300 ease-in-out md:translate-x-0"
+        data-nav
+      >
+        <div
+          class="nav-head py-5 flex justify-between items-center px-4 border-b border-gray-200 md:hidden"
+        >
+          <div class="logo font-ror text-2xl text-[#8B4513]">Bean Haven</div>
+          <button class="close" data-toggle aria-label="Close menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 text-[#3C2F2F] hover:text-blue-800 cursor-pointer transition"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="main-menu flex flex-col md:flex-row gap-8 px-5 mt-5 md:mt-0 md:px-0 w-full"
+        >
+          <li
+            class="nav-link capitalize text-xl font-semibold py-2 text-[#3C2F2F] hover:text-blue-800 transition cursor-pointer"
+          >
+            <a href="#hero"> home</a>
+          </li>
+          <li
+            class="nav-link capitalize text-xl font-semibold py-2 text-[#3C2F2F] hover:text-blue-800 transition cursor-pointer"
+          >
+            <a href="#about"> about</a>
+          </li>
+          <li
+            class="nav-link capitalize text-xl font-semibold py-2 text-[#3C2F2F] hover:text-blue-800 transition cursor-pointer"
+          >
+            <a href="#menu"> menu</a>
+          </li>
+          <li
+            class="nav-link capitalize text-xl font-semibold py-2 text-[#3C2F2F] hover:text-blue-800 transition cursor-pointer"
+          >
+            <a href="#team"> staff</a>
+          </li>
+          <li
+            class="nav-link capitalize text-xl font-semibold py-2 text-[#3C2F2F] hover:text-blue-800 transition cursor-pointer"
+          >
+            <a href="#contact"> contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- overlay-start -->
+      <div
+        class="mobile-overlay fixed inset-0 bg-[#00000059] cursor-pointer backdrop-blur-sm z-[99] transition-opacity duration-300 opacity-0 pointer-events-none md:hidden"
+        data-overlay
+      ></div>
+      <!-- overlay-end -->
+
+      <button class="open md:hidden z-[100]" data-toggle aria-label="Open menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-8 h-8 text-[#3C2F2F] hover:text-blue-800 cursor-pointer transition"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </header>
+    <!-- header-end -->
+
+    <!-- hero-start -->
+    <section
+      class="hero w-full h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-br from-amber-200 via-amber-400 to-amber-700 md:bg-none bg-cover bg-center"
+      id="hero"
+    >
+      <h1
+        class="text-6xl font-bold text-[#8B4513] md:text-[#FFF5E1] mb-6 drop-shadow-lg z[50]"
+      >
+        Welcome to Bean Haven
+      </h1>
+      <p class="text-2xl text-[#3C2F2F] md:text-[#FFF5E1] mb-8 max-w-xl">
+        Discover the finest coffee blends, cozy ambiance, and friendly service.
+        Your perfect cup awaits!
+      </p>
+      <a
+        href="#menu"
+        class="bg-[#8B4513] text-white px-8 py-3 rounded-full text-xl font-semibold shadow hover:bg-blue-800 transition"
+        >View Menu</a
+      >
+    </section>
+    <!-- hero-end -->
+
+    <!-- about-start -->
+    <section
+      class="about w-full min-h-screen bg-[#FFF5E1] flex flex-col md:flex-row items-center justify-center px-6 py-16 gap-10"
+      id="about"
+    >
+      <div class="max-w-lg">
+        <h2 class="text-4xl font-bold text-[#8B4513] mb-4">About Us</h2>
+        <p class="text-lg text-[#3C2F2F] mb-6">
+          Bean Haven is more than a cafe—it's a community. We source premium
+          beans, craft every cup with care, and create a space for you to relax,
+          work, or connect. Join us for a taste of comfort and quality!
+        </p>
+      </div>
+      <div
+        class="w-72 h-72 bg-gray-300 rounded-lg shadow-lg flex items-center justify-center overflow-hidden"
+      >
+        <img
+          src="./img/about.jpg"
+          alt="About Bean Haven"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </section>
+    <!-- about-end -->
+
+    <!-- menu-start -->
+    <section class="menu w-full min-h-screen bg-amber-950 py-16 px-6" id="menu">
+      <h2 class="text-4xl font-bold text-[#FFF5E1] mb-10 text-center">
+        Our Menu
+      </h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
+      >
+        <div
+          class="bg-[#FFF5E1] rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
+        >
+          <img
+            src="./img/menu-1.jpg"
+            alt="Espresso"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4 text-[#8B4513] font-semibold text-xl">Espresso</div>
+        </div>
+        <div
+          class="bg-[#FFF5E1] rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
+        >
+          <img
+            src="./img/menu-2.jpg"
+            alt="Cappuccino"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4 text-[#8B4513] font-semibold text-xl">Cappuccino</div>
+        </div>
+        <div
+          class="bg-[#FFF5E1] rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
+        >
+          <img
+            src="./img/menu-3.jpg"
+            alt="Latte"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4 text-[#8B4513] font-semibold text-xl">Latte</div>
+        </div>
+        <div
+          class="bg-[#FFF5E1] rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
+        >
+          <img
+            src="./img/menu-4.jpg"
+            alt="Mocha"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4 text-[#8B4513] font-semibold text-xl">Mocha</div>
+        </div>
+        <div
+          class="bg-[#FFF5E1] rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
+        >
+          <img
+            src="./img/menu-5.jpg"
+            alt="Cold Brew"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4 text-[#8B4513] font-semibold text-xl">Cold Brew</div>
+        </div>
+        <div
+          class="bg-[#FFF5E1] rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
+        >
+          <img
+            src="./img/menu-6.jpg"
+            alt="Pastries"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4 text-[#8B4513] font-semibold text-xl">Pastries</div>
+        </div>
+      </div>
+    </section>
+    <!-- menu-end -->
+
+    <!-- staff-start -->
+    <section class="w-full min-h-[350px] bg-amber-600 py-16 px-6" id="team">
+      <h2 class="text-4xl font-bold text-[#8B4513] mb-10 text-center">
+        Meet Our Staff
+      </h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+      >
+        <div class="flex flex-col items-center">
+          <img
+            src="./img/staff-1.jpg"
+            alt="Alice - Barista"
+            class="w-56 h-80 object-cover rounded-xl shadow-lg mb-3"
+          />
+          <div class="text-[#8B4513] font-semibold text-xl">Alice</div>
+          <div class="text-[#3C2F2F]">Head Barista</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="./img/staff-2.jpg"
+            alt="Bob - Manager"
+            class="w-56 h-80 object-cover rounded-xl shadow-lg mb-3"
+          />
+          <div class="text-[#8B4513] font-semibold text-xl">Eva</div>
+          <div class="text-[#3C2F2F]">Barista</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="./img/staff-3.jpg"
+            alt="Carol - Baker"
+            class="w-56 h-80 object-cover rounded-xl shadow-lg mb-3"
+          />
+          <div class="text-[#8B4513] font-semibold text-xl">Carol</div>
+          <div class="text-[#3C2F2F]">Pastry Chef</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="./img/staff-4.jpg"
+            alt="David - Waiter"
+            class="w-56 h-80 object-cover rounded-xl shadow-lg mb-3"
+          />
+          <div class="text-[#8B4513] font-semibold text-xl">Bob</div>
+          <div class="text-[#3C2F2F]">Cafe Manager</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="./img/staff-5.jpg"
+            alt="Eva - Barista"
+            class="w-56 h-80 object-cover rounded-xl shadow-lg mb-3"
+          />
+          <div class="text-[#8B4513] font-semibold text-xl">Frank</div>
+          <div class="text-[#3C2F2F]">Cleaner</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="./img/staff-6.jpg"
+            alt="Frank - Cleaner"
+            class="w-56 h-80 object-cover rounded-xl shadow-lg mb-3"
+          />
+          <div class="text-[#8B4513] font-semibold text-xl">David</div>
+          <div class="text-[#3C2F2F]">Waiter</div>
+        </div>
+      </div>
+    </section>
+    <!-- staff-end -->
+
+    <!-- reviews-start -->
+    <section class="w-full min-h-[350px] bg-[#FFF5E1] py-16 px-6" id="reviews">
+      <h2 class="text-4xl font-bold text-[#8B4513] mb-10 text-center">
+        Customer Reviews
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center"
+        >
+          <img
+            src="./img/review-1.jpg"
+            alt="Review by Sarah"
+            class="w-20 h-20 rounded-full object-cover mb-4"
+          />
+          <div class="text-[#8B4513] font-semibold text-lg mb-2">Sarah M.</div>
+          <p class="text-[#3C2F2F] text-center">
+            "Best coffee in town! The staff is always friendly and the
+            atmosphere is perfect for relaxing."
+          </p>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center"
+        >
+          <img
+            src="./img/review-2.jpg"
+            alt="Review by James"
+            class="w-20 h-20 rounded-full object-cover mb-4"
+          />
+          <div class="text-[#8B4513] font-semibold text-lg mb-2">James T.</div>
+          <p class="text-[#3C2F2F] text-center">
+            "I love the pastries and the cold brew. Bean Haven is my go-to spot
+            for a morning pick-me-up."
+          </p>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center"
+        >
+          <img
+            src="./img/review-3.jpg"
+            alt="Review by Priya"
+            class="w-20 h-20 rounded-full object-cover mb-4"
+          />
+          <div class="text-[#8B4513] font-semibold text-lg mb-2">Priya S.</div>
+          <p class="text-[#3C2F2F] text-center">
+            "Great place to meet friends or get some work done. Highly recommend
+            their cappuccino!"
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- reviews-end -->
+
+    <!-- contact & footer-start -->
+    <section class="w-full bg-amber-950 py-10 px-4" id="contact">
+      <h2 class="text-3xl font-bold text-[#FFF5E1] mb-6 text-center">
+        Contact Us
+      </h2>
+      <div class="max-w-xl mx-auto flex flex-col items-center">
+        <form
+          class="w-full flex flex-col gap-4 bg-[#FFF5E1] p-4 rounded-lg shadow"
+        >
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="p-2 rounded border border-gray-300 text-base"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="p-2 rounded border border-gray-300 text-base"
+            required
+          />
+          <textarea
+            placeholder="Your Message"
+            class="p-2 rounded border border-gray-300 h-24 resize-none text-base"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-[#8B4513] text-white px-6 py-2 rounded-full text-base font-semibold shadow hover:bg-blue-800 transition"
+          >
+            Send Message
+          </button>
+        </form>
+        <div class="mt-6 text-center text-[#FFF5E1] text-base">
+          <div class="font-bold text-xl mb-1">Bean Haven Cafe</div>
+          <div>Open: 7am - 7pm</div>
+          <div>Phone: (123) 456-7890</div>
+          <div>Email: hello@beanhaven.com</div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="w-full bg-[#8B4513] py-4 text-center text-[#FFF5E1] text-base mt-6"
+    >
+      &copy; 2025 Bean Haven Cafe. All rights reserved.
+    </footer>
+    <!-- contact & footer-end -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
