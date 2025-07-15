@@ -1,4 +1,5 @@
 # Bean Haven Cafe Website
+[demo](https://samisalmon.github.io/coffee_shop/)
 
 A modern, responsive cafe website built with HTML and Tailwind CSS.
 
